@@ -2,6 +2,6 @@ build:
   - go build -o mycli
 files:
   - .gitignore
-  - src/main/app.go
-  - src/main/main.go
+  - app.go
+  - main.go
 command: ./mycli
