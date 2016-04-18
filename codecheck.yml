@@ -1,0 +1,5 @@
+build:
+  - go build -o mycli main
+env:
+  APP_COMMAND: ./mycli
+test: mocha
