@@ -1,5 +1,5 @@
 build:
-  - go build -o mycli main
+  - go build -o mycli
 files:
   - .gitignore
   - src/main/app.go

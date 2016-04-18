@@ -2,7 +2,7 @@
 
 GoでCLIアプリケーションを作成するためのテンプレートです。
 
-[src/main/app.go](src/main/app.go)を編集することでCLIアプリケーションを作成することができます。
+[app.go](app.go)を編集することでCLIアプリケーションを作成することができます。
 
 このテンプレートではCLI作成のユーティリティとして、cli.goを使用していsます。  
 cli.goについての詳細は[cli.goのリポジトリ](https://github.com/codegangsta/cli)をごらんください。
@@ -16,7 +16,7 @@ func doMain(c *cli.Context) {
 ```
 
 通常のパラメータは`c.Args()`で配列として取得できます。
-オプション形式の引数を使用する場合は[src/main/main.go](src/main/main.rb)でcliをカスタマイズしてください。
+オプション形式の引数を使用する場合は[main.go](main.rb)でcliをカスタマイズしてください。
 
 ## コマンド実行結果の標準出力への出力
 `fmt.Println`メソッドを使用してください。
