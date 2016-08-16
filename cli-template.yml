@@ -5,4 +5,5 @@ files:
   - .gitignore
   - app.go
   - main.go
+main: app.go
 command: ./mycli
