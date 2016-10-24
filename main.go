@@ -1,9 +1,12 @@
 package main
 
 import (
-  "os"
+	"fmt"
+	"os"
 )
 
 func main() {
-	run(os.Args)
+	for _, arg := range os.Args[1:] {
+		fmt.Println(arg)
+	}
 }

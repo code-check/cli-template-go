@@ -2,7 +2,6 @@ build:
   - go build -o theapp
 files:
   - .gitignore
-  - app.go
   - main.go
 main: app.go
 command: ./theapp
