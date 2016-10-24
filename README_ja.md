@@ -1,26 +1,21 @@
-# CLIアプリケーション作成用テンプレート(Go)
+# コマンドラインアプリケーション(CLI アプリ)作成用テンプレート(Go)
 
-GoでCLIアプリケーションを作成するためのテンプレートです。
-
-[app.go](app.go)を編集することでCLIアプリケーションを作成することができます。
-
-このテンプレートではCLI作成のユーティリティとして、cli.goを使用していsます。  
-cli.goについての詳細は[cli.goのリポジトリ](https://github.com/codegangsta/cli)をごらんください。
+[app.go](app.go)を編集して、CLIアプリを実装してください。
 
 ## コマンドライン引数の取得方法
-app.goファイルには`doMain`というメソッドが定義されています。
+app.goファイルには`run`というメソッドが定義されています。
 
 ``` go
-func doMain(c *cli.Context) {
+func run(args []string) {
+  // code to run
 }
 ```
 
-通常のパラメータは`c.Args()`で配列として取得できます。
-オプション形式の引数を使用する場合は[main.go](main.rb)でcliをカスタマイズしてください。
+ここでの `args` は、[main.go](main.go) の `main` 関数内で渡された `os.Args` です。[main.go](main.go) も編集可能なファイルとして用意されているので、CLI アプリケーションとして、オプション解析を行いたい場合は [main.go](main.go) を編集すると良いでしょう。
 
 ## コマンド実行結果の標準出力への出力
-`fmt.Println`メソッドを使用してください。
+標準出力への出力は `fmt` パッケージ内の `Print` 系のメソッドで可能です。
 
 ``` go
-  fmt.Println(c.Argus[0])
+fmt.Println(args)
 ```

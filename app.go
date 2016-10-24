@@ -2,11 +2,10 @@ package main
 
 import (
   "fmt"
-  "github.com/codegangsta/cli"
 )
 
-func doMain(c *cli.Context) {
-  for i := 0; i<len(c.Args()); i++ {
-    fmt.Println(c.Args()[i])
-  }
+func run(args []string) {
+	for _, v := range args[1:] {
+		fmt.Println(v)
+	}
 }

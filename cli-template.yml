@@ -1,9 +1,8 @@
 build:
-  - go get github.com/codegangsta/cli
-  - go build -o mycli
+  - go build -o theapp
 files:
   - .gitignore
   - app.go
   - main.go
 main: app.go
-command: ./mycli
+command: ./theapp

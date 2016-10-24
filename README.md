@@ -1,26 +1,21 @@
-# CLI template for Go
+# Command line application template for Go
 
-This is template app for CLI test.  
-You can make console application by editing [app.go](app.go)
-
-It uses cli.go. See detail in [GitHub repo of cli.go](https://github.com/codegangsta/cli)
+Implement CLI application by editing [app.go](app.go).
 
 ## How to get input parameters
-app.go file has a function `doMain`.  
-It takes a parameter `c *cli.Context`.
+app.go file has a function `run`.  
 
 ``` go
-func doMain(c *cli.Context) {
+func run(args []string) {
+  // code to run
 }
 ```
 
-All parameters are passed as `c.Args()` array
-
-If you want to use option parameter, you can customize cli  in [main.go](main.rb)
+`args` is simply came from `os.Args`, passed by `main` function in [main.go](main.go). [main.go](main.go) is also an editable file; if you want to do option parse, you may customize this file as well.
 
 ## How to output result
-You can use `fmt.Println` method
+You can use `Print` methods in `fmt` package.
 
 ``` go
-  fmt.Println(c.Argus[0])
+fmt.Println(args)
 ```
