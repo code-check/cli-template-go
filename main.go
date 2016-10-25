@@ -6,7 +6,11 @@ import (
 )
 
 func main() {
-	for _, arg := range os.Args[1:] {
-		fmt.Println(arg)
+	run(os.Args[1:])
+}
+
+func run(args []string) {
+	for _, v := range args {
+		fmt.Println(v)
 	}
 }
