@@ -3,5 +3,5 @@ build:
 files:
   - .gitignore
   - main.go
-main: app.go
+main: main.go
 command: ./theapp
