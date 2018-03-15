@@ -1,7 +1,10 @@
 build:
-  - go build -o theapp
+  - sh build.sh
 files:
-  - .gitignore
+  - build.sh
   - main.go
 main: main.go
 command: ./theapp
+envConf:
+  imageName: "givery/track-go-1.10"
+  workingDir: "/root/src/src/trucks.run/challenge"

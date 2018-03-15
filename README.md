@@ -25,10 +25,9 @@ fmt.Println(args)
 ## Install External Libraries
 If you want to use external libraries, do the following:
 
-- Add the following lines to [codecheck.yml](codecheck.yml), before the `go build` line  
+- Add the following lines to [build.sh](build.sh), before the `go build` line  
 (You can have multiple libraries by adding more lines)
 
-``` yaml
-build:
-  - go get namespace.of/some/library
+```
+go get namespace.of/some/library
 ```

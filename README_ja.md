@@ -25,10 +25,9 @@ fmt.Println(args)
 ## 外部ライブラリの追加方法
 外部ライブラリを使用する場合は以下の手順で実施してください。
 
-- [codecheck.yml](codecheck.yml)に以下の内容を `go build` の前に追加  
+- [build.sh](build.sh)に以下の内容を `go build` の前に追加  
 (複数のライブラリのインストールも行を追加していく事で可能です)
 
-``` yaml
-build:
-  - go get namespace.of/some/library
+```
+go get namespace.of/some/library
 ```
